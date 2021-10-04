@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_sms"
+            android:textColor="@color/white"
+            tools:text="Envoi SMS " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:gravity="top"
+                android:text="@string/text_num"
+                android:textColor="@color/white" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="39dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/num_input"
+                android:layout_width="10dp"
+                android:layout_height="294dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entrez_un_num_ro"
+                    android:textColor="#757575"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_message" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input"
+            android:layout_width="428dp"
+            android:layout_height="176dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_message"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:gravity="top"
+                android:text="@string/entrez_votre_message"
+                android:textColor="#757575" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendHandler"
+            android:text="@string/send_button" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

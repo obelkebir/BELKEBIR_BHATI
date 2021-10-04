@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tp1_Belkebir_Bhati</string>
+    <string name="text_sms">Envoi SMS</string>
+    <string name="text_num">Numéro</string>
+    <string name="Message">text_message</string>
+    <string name="hint">hint</string>
+    <string name="entrez_un_num_ro">Entrez un numéro...</string>
+    <string name="entrez_votre_message">Entrez votre message...</string>
+    <string name="txt_message">Message:</string>
+    <string name="send_button">Envoyer</string>
+    <string name="error_num">Numéro trop court ! </string>
+    <string name="error_msg">Entrez un message</string>
+</resources>
