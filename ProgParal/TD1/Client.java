@@ -1,12 +1,8 @@
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.net.SocketException;
 
 public class Client implements Runnable{
     private Socket socket;
@@ -22,43 +18,45 @@ public class Client implements Runnable{
 
     @Override
     public void run() {
-        while (true) {
-            System.out.println("lecture du contenu");
-            String request = "";
-            while (true){
-                try {
-                    System.out.println("Socket fermee ? " + socket.isClosed());
-                    String received = null;
-                    received = input.readLine();
-                    //System.out.println("Lecture : " + received);
-                    //System.out.println("Count : " + received.length() + " " + (received.length() == 0));                    
-                    if (received.length() == 0)
-                        break;
-                    if (received == null) {
-                        System.out.print("NULL ");
-                        output.write("\r\n\r\n");
-                        output.flush();
-                    }
-                    request += "\n" + received;
-                } catch (IOException e) {
-                    System.err.println("Socket fermée pour la lecture");
-                    e.printStackTrace();
-                    closeCommunication();
-                    return;
-                }
-            }
-
-            System.out.println("Le client demande : " + request);
+        System.out.println("lecture du contenu");
+        String request = "";
+        while (true){
             try {
-                output.write(Response.greetingResponse());
-                output.flush();
+                System.out.println("Socket fermee ? " + socket.isClosed());
+                String received = "";
+                received = input.readLine();
+                //System.out.println("Lecture : " + received);
+                //System.out.println("Count : " + received.length() + " " + (received.length() == 0));                    
+                if (received.length() == 0)
+                    break;
+                if (received == null) {
+                    System.out.print("NULL ");
+                    output.write("\r\n\r\n");
+                    output.flush();
+                }
+                request += "\n" + received;
             } catch (IOException e) {
-                System.err.println("Socket fermée pour l'ecriture");
+                System.err.println("Socket fermée pour la lecture");
                 e.printStackTrace();
+                closeCommunication();
+                return;
+            } catch (java.lang.NullPointerException e) {
+                System.err.println("Null pointer, interruption");
+                //e.printStackTrace();
                 closeCommunication();
                 return;
             }
         }
+
+        System.out.println("Le client demande : " + request);
+        try {
+            output.write(Response.greetingResponse());
+            output.flush();
+        } catch (IOException e) {
+            System.err.println("Socket fermée pour l'ecriture");
+        }
+        closeCommunication();
+        System.out.println("FIN DE REQUETE");
     }
 
     public void closeCommunication(){

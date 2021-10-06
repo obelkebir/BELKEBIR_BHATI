@@ -28,6 +28,7 @@ public class Server {
         System.out.println("server started");
 
         while (true) {
+            System.out.println("Waiting for client");
             Socket socket = serverSocket.accept();
             System.out.println("New client : " + socket.getInetAddress().toString() + " " + socket.getPort());
             Client c = instantiateNewClient(socket);
