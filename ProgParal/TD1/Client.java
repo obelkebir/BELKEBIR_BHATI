@@ -22,7 +22,7 @@ public class Client implements Runnable{
         String request = "";
         while (true){
             try {
-                System.out.println("Socket fermee ? " + socket.isClosed());
+                //System.out.println("Socket fermee ? " + socket.isClosed());
                 String received = "";
                 received = input.readLine();
                 //System.out.println("Lecture : " + received);
