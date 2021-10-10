@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TP_Belkebir_Bhati</string>
+    <string name="go_to_tp_1">Go to TP 1</string>
+    <string name="home_page_text">Home Page\nBelow is a list of TP</string>
+    <string name="go_to_tp_2">Go to TP 2</string>
+    <string name="go_to_tp_3">Go to TP 3</string>
+    <string name="go_to_tp_4">Go to TP 4</string>
+    <string name="go_to_tp_5">Go to TP 5</string>
+    <string name="go_to_tp_6">Go to TP 6</string>
+
+
+    <string name="enter_a_message">Entrez un message</string>
+    <string name="enter_a_number">Entrez un numéro</string>
+    <string name="tp1_send">Envoyer</string>
+    <string name="tp_1">TP 1</string>
+    <string name="go_home">go home</string>
+    <string name="tp1_number">numéro</string>
+    <string name="tp1_message">message</string>
+    <string name="error_msg">Entrez un message</string>
+    <string name="error_num">Numéro trop court ! </string>
+    <string name="tp_2">TP 2</string>
+
+
+</resources>

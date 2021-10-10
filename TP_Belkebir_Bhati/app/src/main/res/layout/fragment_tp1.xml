@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tp_1"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnNavHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textTitle"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-10dp"
+        android:layout_toEndOf="@+id/textTitle"
+        android:text="@string/go_home" />
+
+    <LinearLayout
+        android:id="@+id/tp1LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textTitle"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="@color/td1"
+        android:gravity="center">
+
+    <EditText
+        android:id="@+id/tp1EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="@string/enter_a_message"
+        android:layout_weight="1"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/tp1SendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tp1_send"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tp1LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tp1LinearLayout"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tp1_number"
+                android:textSize="18sp"
+                android:layout_weight="0.8"/>
+
+            <EditText
+                android:id="@+id/tp1numero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:hint="@string/enter_a_number"
+                android:layout_weight="0.2"
+                android:importantForAutofill="no"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tp1_message"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/tp1message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:hint="@string/enter_a_message"
+            android:lines="8"
+            android:minLines="6"
+            android:maxLines="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:scrollbars="vertical"/>
+
+        <Button
+            android:id="@+id/tp1sendMsgBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tp1_send"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

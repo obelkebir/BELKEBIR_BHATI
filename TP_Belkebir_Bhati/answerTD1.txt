@@ -1,0 +1,76 @@
+réponses du TD 1 :
+
+Exercice 1 : Hello World
+
+1) A quoi sert le fichier AndroidManifest.xml ?
+Il est essentiel pour lancer une application android car
+- il indique le nom du package Java grace à quoi il a pouvoir
+connaitre le chemin des fichiers à compiler
+- indique les activité présentes, ainsi que quel quel activité choisir au démarage
+- les permissions de l'application
+- les configurations hardware et software requises
+
+2) 
+Quelle est la classe java principale de votre application ?
+MainActivity
+de quelle classe hérite-t-elle?
+AppCompatActivity
+Quelle est la méthode principale à implémenter ?
+@Override protected void onCreate(Bundle savedInstanceState)
+
+3) Dans quel fichier est décrite l’apparence graphique de votre activité principale et quel est son type?
+L'apparence de l'activité est décrite dans le fichier : activity_main.xml
+Le type xml est un métalangage de balisage extensible qui donne une structure
+aux données contenues.
+
+4) A quoi sert le fichier string.xml contenu dans le dossier values ? 
+Le fichier contient les valeurs de texte référençable par les fichiers xml.
+Cela permet de séparer le contenu textuel sur l'interface graphique du conteneur.
+Cela permet de pouvoir facilement changer la langue d'une application, sans avoir
+à recréer de nouveaux fichiers xml.
+
+Exercice 2 : My First App
+
+1) Que fait la méthode findViewById et quel paramètre attend-elle ?
+Elle récupère la View en fonction de l'identifiant entier donné en paramètre.
+
+2) A quoi correspond la classe java R.java contenue dans le dossier gen ? 
+la classe R contient toutes les identifiants de toutes les View
+
+Exercice 4 : Mise en pause et reprise d'application
+
+1) Quels sont les états possibles d’une application android ?
+Une application peut avoir 4 états
+- launched (activité)
+- running (activité)
+- shutDown (activité)
+- killed (processus)
+
+2) Quelles sont les méthodes principales d’une activité android ? 
+Les transitions des états appellent une ou plusieur des méthodes suivantes pour 
+initialiser, ou éxécuter d'autres méthodes au moment des transitions.
+- onCreate
+- onStart
+- onResume
+- onPause
+- onStop
+- onDestroy
+
+3a) Démarrer votre application. Quelles sont les méthodes successivement appelées ?
+onCreate, onStart, onResume
+
+3b) Pour cacher votre application, cliquer sur l’icone de l’accueil. Quelles méthodes sont
+appelées ?
+onPause, onStop
+
+3c) Est-il possible de détruire manuellement l’application ? 
+oui, si l'on appelle la méthode finish() au moment du onStop, et qu'on indique
+dans le manifest android:noHistory="true". L'application sera alors détruite, 
+sans que la mémoire soit conversée.
+
+3d) Que se passe-t-il si on démarre une nouvelle instance de votre
+application via Eclipse ? 
+
+
+
+
