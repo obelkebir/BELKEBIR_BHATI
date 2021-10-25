@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new FragmentHome(), "Home Fragment");
         adapter.addFragment(new FragmentTP1(), "TP 1");
         adapter.addFragment(new FragmentTP2(), "TP 2");
+        adapter.addFragment(new FragmentTP3(), "TP 3");
         viewPager.setAdapter(adapter);
     }
 
@@ -42,30 +43,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(MainActivity.this, "onStart", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "onStart", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(MainActivity.this, "onResume", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "onResume", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(MainActivity.this, "onPause", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "onPause", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(MainActivity.this, "onStop", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "onStop", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(MainActivity.this, "onDestroy", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "onDestroy", Toast.LENGTH_SHORT).show();
     }
 }
