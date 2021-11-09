@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
-        android:text="TP 1"
+        android:text="TP 4"
         android:textAlignment="center"
         android:textSize="25sp" />
 
@@ -24,6 +24,15 @@
         android:layout_toRightOf="@+id/textTitle"
         android:text="go home" />
 
+
+    <Button
+        android:id="@+id/btnStartOps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Start long operations" />
 
 
 </RelativeLayout>

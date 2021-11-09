@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
 
 
     <TextView
@@ -24,58 +26,51 @@
         android:layout_toRightOf="@+id/textTitle"
         android:text="go home" />
 
-    <EditText
-        android:id="@+id/isbn"
+    <TextView
+        android:id="@+id/searchBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
-        android:layout_marginLeft="20dp"
-        android:hint="ISBN"
-        android:inputType="number"
-        android:textSize="20sp" />
+        android:text="Search Result"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp" />
 
-    <EditText
+    <TextView
+        android:id="@+id/bookTitleHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBook"
+        android:text="Title"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
         android:id="@+id/bookTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/isbn"
-        android:hint="Title"
+        android:layout_below="@+id/bookTitleHint"
+        android:text=""
         android:textSize="20sp"
         android:layout_marginLeft="20dp" />
 
-    <Button
-        android:id="@+id/btnAddBook"
+    <TextView
+        android:id="@+id/bookISBNHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookTitle"
-        android:layout_marginLeft="20dp"
-        android:text="add book" />
+        android:text="ISBN"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp" />
 
     <TextView
-        android:id="@+id/searchBookTitle"
+        android:id="@+id/bookISBN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnAddBook"
-        android:text="Searching for a book ?"
+        android:layout_below="@+id/bookISBNHint"
+        android:text=""
         android:textSize="20sp"
         android:layout_marginLeft="20dp" />
 
-    <EditText
-        android:id="@+id/searchKeywords"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/searchBookTitle"
-        android:hint="keywords"
-        android:textSize="20sp"
-        android:layout_marginLeft="20dp" />
-
-    <Button
-        android:id="@+id/btnSearchBook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/searchKeywords"
-        android:layout_marginLeft="20dp"
-        android:text="search" />
 
 
 </RelativeLayout>

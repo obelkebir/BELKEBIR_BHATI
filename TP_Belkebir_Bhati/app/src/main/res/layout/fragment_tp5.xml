@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
-        android:text="TP 1"
+        android:text="TP 5"
         android:textAlignment="center"
         android:textSize="25sp" />
 
@@ -25,5 +25,64 @@
         android:text="go home" />
 
 
+    <TextView
+        android:id="@+id/textCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textTitle"
+        android:text=""
+        android:hint="start service"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Start service" />
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartService"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="stop service" />
+
+    <Button
+        android:id="@+id/btncount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStopService"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="getcount" />
+
+    <Button
+        android:id="@+id/btngps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btncount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Get po GPS" />
+
+    <TextView
+        android:id="@+id/textgps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btngps"
+        android:text=""
+        android:hint=""
+        android:textSize="20sp"
+        />
 
 </RelativeLayout>
