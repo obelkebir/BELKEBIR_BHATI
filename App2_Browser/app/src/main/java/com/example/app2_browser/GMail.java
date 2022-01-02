@@ -20,7 +20,7 @@ import android.util.Log;
 
 public class GMail {
 
-    final String emailPort = "465";// gmail's smtp port
+    final String emailPort = "587";// gmail's smtp port
     final String smtpAuth = "true";
     final String starttls = "true";
     final String emailHost = "smtp.gmail.com";
@@ -80,13 +80,11 @@ public class GMail {
         // emailMessage.setContent(emailBody, "text/html");// for a html email
         emailMessage.setText(emailBody);// for a text email
         Log.i("GMail", "Email Message created.");
-        Transport.send(emailMessage, fromEmail, fromPassword);
         return emailMessage;
     }
 
     public void sendEmail() throws AddressException, MessagingException {
 
-        /*
         Transport transport = mailSession.getTransport("smtp");
         Log.i("GMail","TEST INFO : " + emailHost + " " + fromEmail + " " + fromPassword);
         transport.connect(emailHost, fromEmail, fromPassword);
@@ -94,7 +92,7 @@ public class GMail {
         transport.sendMessage(emailMessage, emailMessage.getAllRecipients());
         transport.close();
         Log.i("GMail", "Email sent successfully.");
-        */
+
     }
 
 }
